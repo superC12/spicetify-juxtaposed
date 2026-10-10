@@ -33,6 +33,7 @@ A [Spicetify](https://spicetify.app) theme.
 
 - [Cat-Jam Synced](https://github.com/BlafKing/spicetify-cat-jam-synced): the cat gets a rounded tile beside the player buttons and a glow in the song's colour.
 - [Stay Closed](https://github.com/superC12/spicetify-stay-closed): stops the Now Playing view from opening on its own.
+- [Lyrics Plus (Juxtaposed Edition)](https://github.com/superC12/spicetify-lyrics-plus-juxtaposed): Lyrics Plus with a song-info panel, text size buttons and a small lyrics pop-up on the player bar. Its lyrics page takes a darkened version of the song's colour, so it matches the theme.
 
 ## 📦 Install
 

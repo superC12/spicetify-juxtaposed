@@ -89,6 +89,10 @@ Several ideas here come from Juxtopposed's video [I Redesigned the ENTIRE Spotif
 
 ## 📋 Changelog
 
+### v1.0.2
+
+- Fixed the restored Marketplace and Lyrics Plus tabs showing up but not responding to clicks.
+
 ### v1.0.1
 
 - Fixed Marketplace's tab bar (Extensions, Themes, Snippets, Apps, Installed) and Lyrics Plus's mode tabs not appearing on Spotify 1.3.4.

@@ -1,5 +1,5 @@
 // Juxtaposed - a Spicetify theme
-// VERSION: 1.0.1
+// VERSION: 1.0.2
 // https://github.com/superC12/spicetify-juxtaposed
 
 (function juxtaposed() {
@@ -561,7 +561,9 @@ window.__juxtaposedTheme = true;
 	topbarStyle.textContent = `
 		.layoutTweaks-topbarSlot {
 			position: fixed;
-			z-index: 4;
+			z-index: 9;
+			pointer-events: auto;
+			-webkit-app-region: no-drag;
 			display: flex;
 			align-items: center;
 			box-sizing: border-box;
@@ -582,7 +584,8 @@ window.__juxtaposedTheme = true;
 			if (document.querySelector(".main-topBar-topbarContentWrapper")) return;
 			topbarSlot = document.createElement("div");
 			topbarSlot.className = "main-topBar-topbarContentWrapper layoutTweaks-topbarSlot";
-			document.body.appendChild(topbarSlot);
+			// Inside "#main": Spotify's click handling only covers that element, so tabs on <body> ignore clicks
+			(document.querySelector("#main") ?? document.body).appendChild(topbarSlot);
 		}
 		const main = document.querySelector("#main-view") ?? document.querySelector("main");
 		if (!main) return;

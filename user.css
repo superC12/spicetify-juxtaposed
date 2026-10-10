@@ -1,0 +1,15 @@
+/*
+ * Juxtaposed
+ * https://github.com/superC12/spicetify-juxtaposed
+ *
+ * The theme's styles are applied by theme.js. They depend on the song that is playing and on
+ * element names that Spotify changes between versions, so they are set at runtime instead of here.
+ * This file only declares the defaults those styles fall back to.
+ */
+
+:root {
+	--dynamic-bar: #1c1c1c;
+	--dynamic-header: #545454;
+	--dynamic-glow: #121212;
+	--dynamic-base: #000000;
+}

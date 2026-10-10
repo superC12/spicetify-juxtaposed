@@ -1,0 +1,10 @@
+{
+	"name": "Juxtaposed",
+	"description": "Spotify that takes its colour from the song you're playing, with a roomier player bar, type badges on cards and a tidier Home.",
+	"preview": "preview.png",
+	"readme": "README.md",
+	"usercss": "user.css",
+	"schemes": "color.ini",
+	"include": ["https://raw.githubusercontent.com/superC12/spicetify-juxtaposed/main/theme.js"],
+	"tags": ["dynamic", "dark", "album art"]
+}

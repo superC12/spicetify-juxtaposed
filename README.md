@@ -41,6 +41,9 @@ A [Spicetify](https://spicetify.app) theme.
 
 Open the [Spicetify Marketplace](https://github.com/spicetify/marketplace), go to the **Themes** tab, search for **Juxtaposed** and click install.
 
+> [!TIP]
+> If Marketplace shows no tabs at all (this happens on Spotify 1.3.4 with Spicetify 2.45.3), you can't reach the Themes tab. Use the manual install below. Once the theme is running it brings the tabs back.
+
 ### Manual
 
 1. Download this repo and copy `user.css`, `color.ini` and `theme.js` into a folder named `Juxtaposed` inside your Spicetify `Themes` folder.
@@ -85,6 +88,10 @@ spicetify apply
 Several ideas here come from Juxtopposed's video [I Redesigned the ENTIRE Spotify UI from Scratch](https://youtu.be/suhEIUapSJQ): the player bar that follows the song's colour, a homepage you can prune, and telling albums and playlists apart at a glance. This theme is a fan project. It is not made by or affiliated with Juxtopposed or Spotify.
 
 ## 📋 Changelog
+
+### v1.0.1
+
+- Fixed Marketplace's tab bar (Extensions, Themes, Snippets, Apps, Installed) and Lyrics Plus's mode tabs not appearing on Spotify 1.3.4.
 
 ### v1.0.0
 

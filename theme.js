@@ -1,5 +1,5 @@
 // Juxtaposed - a Spicetify theme
-// VERSION: 1.0.0
+// VERSION: 1.0.1
 // https://github.com/superC12/spicetify-juxtaposed
 
 (function juxtaposed() {
@@ -553,6 +553,47 @@ window.__juxtaposedTheme = true;
 	}
 	restoreLegacyNames();
 
+	// Marketplace and Lyrics Plus put their tab bars into ".main-topBar-topbarContentWrapper", which Spotify
+	// 1.3.4 no longer has, so their tabs never appear. Provide a stand-in pinned over the top of the main view.
+	// It lives on <body>, outside the part of the page Spotify re-renders, and stays on when Layout Tweaks is off.
+	const topbarStyle = document.createElement("style");
+	topbarStyle.className = "layoutTweaks-topbar";
+	topbarStyle.textContent = `
+		.layoutTweaks-topbarSlot {
+			position: fixed;
+			z-index: 4;
+			display: flex;
+			align-items: center;
+			box-sizing: border-box;
+			height: 56px;
+			padding: 0 24px;
+			border-radius: 8px 8px 0 0;
+			background: var(--spice-main, #121212);
+		}
+		.layoutTweaks-topbarSlot:empty {
+			display: none;
+		}
+	`;
+	document.head.appendChild(topbarStyle);
+	let topbarSlot = null;
+	function placeTopbar() {
+		if (!topbarSlot) {
+			// Use the real one if Spotify, Spicetify or another extension already provides it
+			if (document.querySelector(".main-topBar-topbarContentWrapper")) return;
+			topbarSlot = document.createElement("div");
+			topbarSlot.className = "main-topBar-topbarContentWrapper layoutTweaks-topbarSlot";
+			document.body.appendChild(topbarSlot);
+		}
+		const main = document.querySelector("#main-view") ?? document.querySelector("main");
+		if (!main) return;
+		const rect = main.getBoundingClientRect();
+		topbarSlot.style.top = `${Math.round(rect.top)}px`;
+		topbarSlot.style.left = `${Math.round(rect.left)}px`;
+		topbarSlot.style.width = `${Math.round(rect.width)}px`;
+	}
+	placeTopbar();
+	window.addEventListener("resize", placeTopbar);
+
 	// Content width: Spotify caps pages at 1955px. Raise the cap on wide windows, but never above the main
 	// view's own width, because Spotify's carousels pull their cards inward when the cap exceeds the space.
 	const MAX_CONTENT_WIDTH = 2400;
@@ -658,6 +699,7 @@ window.__juxtaposedTheme = true;
 		requestAnimationFrame(() => {
 			queued = false;
 			restoreLegacyNames();
+			placeTopbar();
 			watchMainView();
 			labelCards();
 			if (document.querySelector('[data-testid="home-page"]')) decorateHome();

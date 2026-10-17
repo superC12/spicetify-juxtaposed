@@ -2,8 +2,6 @@
 
 ![preview](preview-fullscreen-ready.png)
 
-*Actual Spotify playback. The Marketplace thumbnail fits the full screenshot proportionally into a square.*
-
 Spotify that takes its colour from the song you're playing, with a roomier player bar and a tidier Home.
 
 A [Spicetify](https://spicetify.app) theme.

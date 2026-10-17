@@ -42,7 +42,7 @@ A [Spicetify](https://spicetify.app) theme.
 Open the [Spicetify Marketplace](https://github.com/spicetify/marketplace), go to the **Themes** tab, search for **Juxtaposed** and click install.
 
 > [!TIP]
-> If Marketplace shows no tabs at all (this happens on Spotify 1.3.4 with Spicetify 2.45.3), you can't reach the Themes tab. Use the manual install below. Once the theme is running it brings the tabs back.
+> If Marketplace shows no tabs at all (this happens on Spotify 1.3.4 and 1.3.5 with Spicetify 2.45.3), you can't reach the Themes tab. Use the manual install below. Once the theme is running it brings the tabs back.
 
 ### Manual
 
@@ -81,13 +81,17 @@ spicetify apply
 ```
 
 > [!NOTE]
-> Tested on Spotify 1.3.4 with Spicetify 2.45.3 on Windows. Spotify renames its internal elements from time to time, so an update can break parts of the theme until it catches up. If something looks off, please [open an issue](https://github.com/superC12/spicetify-juxtaposed/issues) and paste the output of **Copy theme diagnostics**.
+> Tested on Spotify 1.3.4 and 1.3.5 with Spicetify 2.45.3 on Windows. Spotify renames its internal elements from time to time, so an update can break parts of the theme until it catches up. If something looks off, please [open an issue](https://github.com/superC12/spicetify-juxtaposed/issues) and paste the output of **Copy theme diagnostics**.
 
 ## 💡 Credits
 
 Several ideas here come from Juxtopposed's video [I Redesigned the ENTIRE Spotify UI from Scratch](https://youtu.be/suhEIUapSJQ): the player bar that follows the song's colour, a homepage you can prune, and telling albums and playlists apart at a glance. This theme is a fan project. It is not made by or affiliated with Juxtopposed or Spotify.
 
 ## 📋 Changelog
+
+### v1.0.3
+
+- Checked on Spotify 1.3.5. Everything works without changes.
 
 ### v1.0.2
 

@@ -1,6 +1,8 @@
 # Juxtaposed
 
-![preview](preview.png)
+![preview](preview-square.png)
+
+*Marketplace cover uses a cropped, proportionally scaled Spotify screenshot.*
 
 Spotify that takes its colour from the song you're playing, with a roomier player bar and a tidier Home.
 
@@ -111,6 +113,8 @@ Several ideas here come from Juxtopposed's video [I Redesigned the ENTIRE Spotif
 Related changes are combined under the newest release version.
 
 ### v1.0.0
+
+- New square Marketplace preview with an actual Spotify screenshot, without stretching.
 
 - Marketplace-compatible script URL and a Windows updater for manual installs, with optional daily updates and rollback on failure.
 

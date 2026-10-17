@@ -1,7 +1,7 @@
 {
 	"name": "Juxtaposed",
 	"description": "Spotify that takes its colour from the song you're playing, with a roomier player bar, type badges on cards and a tidier Home.",
-	"preview": "preview.png",
+	"preview": "preview-square.png",
 	"readme": "README.md",
 	"usercss": "user.css",
 	"schemes": "color.ini",

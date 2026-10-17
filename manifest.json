@@ -5,6 +5,12 @@
 	"readme": "README.md",
 	"usercss": "user.css",
 	"schemes": "color.ini",
-	"include": ["https://raw.githubusercontent.com/superC12/spicetify-juxtaposed/main/theme.js"],
-	"tags": ["dynamic", "dark", "album art"]
+	"include": [
+		"https://cdn.jsdelivr.net/gh/superC12/spicetify-juxtaposed@main/theme.js"
+	],
+	"tags": [
+		"dynamic",
+		"dark",
+		"album art"
+	]
 }

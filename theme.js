@@ -1,5 +1,5 @@
 // Juxtaposed - a Spicetify theme
-// VERSION: 1.0.3
+// VERSION: 1.0.0
 // https://github.com/superC12/spicetify-juxtaposed
 
 (function juxtaposed() {

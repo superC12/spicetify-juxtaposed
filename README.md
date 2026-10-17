@@ -60,6 +60,25 @@ Open the [Spicetify Marketplace](https://github.com/spicetify/marketplace), go t
    spicetify apply
    ```
 
+## Updates (Windows)
+
+Marketplace installs use Marketplace's **Installed → Update** action when an update is available. Custom apps can be discovered in Marketplace, but Lyrics Plus still needs the manual installation above.
+
+For manual installs, download [update.ps1](update.ps1) and run it with PowerShell:
+
+```powershell
+# Update this project once
+powershell -NoProfile -ExecutionPolicy Bypass -File .\update.ps1
+# Enable a daily automatic update while signed in
+powershell -NoProfile -ExecutionPolicy Bypass -File .\update.ps1 -EnableAutoUpdate
+# Check without changing files
+powershell -NoProfile -ExecutionPolicy Bypass -File .\update.ps1 -CheckOnly
+# Stop automatic updates
+powershell -NoProfile -ExecutionPolicy Bypass -File .\update.ps1 -DisableAutoUpdate
+```
+
+Use `-Component Both` on these commands to manage the theme and Lyrics Plus together. Only existing manual-install folders are updated. Updates come from the latest published GitHub release, skip an unchanged release commit, and run `spicetify apply` only after downloading changed files; this may reload Spotify. Backups are retained in a `juxtaposed-*` folder in Windows' temporary directory. Failed updates restore the original source files; errors are recorded in `%LOCALAPPDATA%\SpicetifyJuxtaposedUpdater\errors.log`. The scheduled updater runs as your current user without administrator privileges.
+
 ## ⚙️ Settings
 
 Everything is in the profile menu (click your profile picture):
@@ -89,9 +108,11 @@ Several ideas here come from Juxtopposed's video [I Redesigned the ENTIRE Spotif
 
 ## 📋 Changelog
 
-Consolidated release notes: patch updates are grouped under their minor release, with basic controls included in the initial feature release. Historical Git commits, tags and source version identifiers are preserved.
+Related changes are combined under the newest release version.
 
-### v1.0.0 (includes v1.0.3)
+### v1.0.0
+
+- Marketplace-compatible script URL and a Windows updater for manual installs, with optional daily updates and rollback on failure.
 
 - Consolidated release for Spotify 1.3.4 and 1.3.5: song-based colours, roomier player bar, quiet-intro skipping, card badges and Home section hiding.
 - Restores clickable Marketplace and Lyrics Plus tabs on Spotify 1.3.4 and later.

@@ -89,21 +89,12 @@ Several ideas here come from Juxtopposed's video [I Redesigned the ENTIRE Spotif
 
 ## 📋 Changelog
 
-### v1.0.3
+Consolidated release notes: patch updates are grouped under their minor release, with basic controls included in the initial feature release. Historical Git commits, tags and source version identifiers are preserved.
 
-- Checked on Spotify 1.3.5. Everything works without changes.
+### v1.0.0 (includes v1.0.3)
 
-### v1.0.2
-
-- Fixed the restored Marketplace and Lyrics Plus tabs showing up but not responding to clicks.
-
-### v1.0.1
-
-- Fixed Marketplace's tab bar (Extensions, Themes, Snippets, Apps, Installed) and Lyrics Plus's mode tabs not appearing on Spotify 1.3.4.
-
-### v1.0.0
-
-- Initial release.
+- Consolidated release for Spotify 1.3.4 and 1.3.5: song-based colours, roomier player bar, quiet-intro skipping, card badges and Home section hiding.
+- Restores clickable Marketplace and Lyrics Plus tabs on Spotify 1.3.4 and later.
 
 ## License
 

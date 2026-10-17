@@ -2,7 +2,7 @@
 
 ![preview](preview-fullscreen-ready.png)
 
-*Actual Spotify playback, with a generic username and profile icon. The Marketplace thumbnail fits the full screenshot proportionally into a square.*
+*Actual Spotify playback. The Marketplace thumbnail fits the full screenshot proportionally into a square.*
 
 Spotify that takes its colour from the song you're playing, with a roomier player bar and a tidier Home.
 
